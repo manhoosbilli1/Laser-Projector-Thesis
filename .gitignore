@@ -1,3 +1,5 @@
 *
-!*.pdf
-!*.tex
+.gitignore
+day_*/*
+!day_*/*/*/.pdf
+!day_*/**/*.tex

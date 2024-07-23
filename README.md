@@ -2,7 +2,7 @@
 
 This summer i've decided to take up the challenge of understanding and working with radio waves and the supporting gadgets. This will help me solidify my understanding of the light and Lasers in particular. Here's the plan. 
 
-- Starting with refreshing my understanding of the nature of waves by differential equations, understanding SHM in detail and drawing correlation between the different manifestation of SHM like in a mechanical, electromagnetic and optics. For this ill be taking the famous course offered by MIT "Waves 8.01". 
+- Starting with refreshing my understanding of the nature of waves by differential equations, understanding SHM in detail and drawing correlation between the different manifestation of SHM like in a mechanical, electromagnetic and optics. For this ill be taking the famous course offered by MIT "Waves 8.03". 
 
 - Refreshing my memory on Electromagnetic theory with emphasis on static charge, moving charge, and all fields associated with it. this will prepare me to explore propagation.
 

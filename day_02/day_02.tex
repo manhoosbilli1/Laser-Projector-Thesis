@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+\usepackage{hyperref}
+\title{47 DAYS RF WIZARD}
+\author{Shoaib Mustafa}
+\begin{document}
+\maketitle
+
+\begin{center}
+    \section*{DAY 2}
+\end{center}
+\subsection*{Summary}
+Seems like my lack of knowledge of differential equations and classical mechanics is limiting my understanding.
+I shall also start to cover a book on differential equations that will teach me how to identify
+, characterize and solve and what their effects in the real world are. I've already gone through
+the texts of differential equations. What i need is something that will relate it to the real life.
+
+I'm also discarding the book i started with by George Hefkins, instead will be switching to Georgi, Howard.
+As suggested in the course by mit. The Hefkins one is nice and really resonates with me but since the i'll be following the course i can't make this my main.
+I realize that the course work by mit requires alot of reading and with my final year project and life it's a bit hard to read up on course daily. so as mentioned in the document i'll be meeting with professor 
+2 times a week only. the rest of the time i'll be busy with reading. 
+\subsection*{Todays Agenda}
+\begin{itemize}
+    \item watch first video of mit 8.03 and read the relevent texts while also taking notes.
+    \item read up on the books of arrl, waves, emt and photonics. to get basic understanding of what a SHM is.. review DE if needed.
+    \item create a post with complete summary and update github.
+    \item read up on rtl sdr some more to get it working for HF.
+\end{itemize}
+
+\subsection*{8.03 Lecture 1}
+\subsubsection*{How to take the course as mentioned by professor.}
+How Student Time Was Spent\\
+During an average week, students were expected to spend 12 hours on the course, roughly divided as follows:
+\subsubsection*{In Class}
+Met 2 times per week for 1.5 hours per session; 27 sessions total.\\
+Class sessions included lectures, demonstrations, and time to ask the professor questions.\\
+\subsubsection*{Recitation}
+Met 2 times per week for 1 hour per session; 28 sessions total.\\
+Smaller groups of students met with class staff to work through problem sets and to ask questions about the course material.\\
+\subsubsection*{Out of Class}
+Outside of class, students worked on problem sets and prepared for exams.\\
+
+\subsubsection*{George Bekefi text}
+Correction: The site 8.03 seems to be following georgi, howard book. i'll follow this new book from tomorrow. \\
+
+This book starts with simple harmonic motion and the idea that such a motion is pretty generlised
+and is found in many different fields of physics, such as mechanical, optics, electromagentism etc.
+The recipe for the SHM is defined to be following
+\begin{itemize}
+    \item It must be oscillating (repeating motion) about it's equilibrium position (at which point no net force acts on the system).
+    \item It must have a restoring force that is acting opposite to the direction of motion and should be propotional to the force being applied.
+    \item It must have maintain periodic motion.
+\end{itemize}
+
+It is highlighted that if something shows SHM then it's properties that are a function of time
+can be predicted with it's past, present and future known. contrary to my previous belief the property
+could be anything, current in an electric oscillator, position. This is why that in classical mechanics
+the property under study in present as a generalised 'coordinate' instead of assigning it a name.
+
+To prove this point it starts with a simple scenario of a spring mass on a frictionless surface.
+Imagining that force is applid to displace it from the equilibirium position $ X_o $
+Now let's keep in mind the general concept, this displacement could be a disturbance in the atom's position,
+it's electric field, or magnetic field probably? i'm thinking that this should apply generally.
+
+\begin{quote}
+    "If some parameter of the system designating its displacement from the equilibrium position is characterized b ya time-dependent
+    coordinate $\psi(t)$" -George Bekefi page-2
+\end{quote}
+I'm getting that this means that any property that we are measuring is dependent on time $t$ $\psi(t)$ then for that case Newton's law tells us that
+\begin{center}
+    \begin{equation}
+        F = ma = m \frac{d^2 \psi(t)}{dt^2}
+    \end{equation}
+\end{center}
+In this case the time dependent coordiante a is time dependent as it is acceleration which is a derivative of velocity w.r.t time. so what does that tell us anyway?
+not sure really. I think will need to refer to classical mechanics for this.
+
+continuing with the scenario it proceeds to say that the net force is the restoring force and so must be given by.
+\begin{equation}
+    F = -\beta \psi(t)
+\end{equation}
+where beta is the proportionality constant and it is with experiments we can determine it's value to be specific to the application we are studying,
+in the case of mechanical springs it's the springs restoring force, in the case of atoms it's the recoil energy.
+
+The restoring force now contains all the points we talked about. it's proportional and opposite to the direction of motion. in this case the property is position, changing w.r.t time.
+
+combining both equations we get
+
+\begin{equation}
+    -\beta \psi(t)  = m \frac{d^2 \psi(t)}{dt^2}
+\end{equation}
+\begin{equation}
+    \beta \psi(t)  + m \frac{d^2 \psi(t)}{dt^2} = 0
+\end{equation}
+\begin{equation}
+    \frac{d^2 \psi(t)}{dt^2} + \omega^2_o \psi(t) = 0
+\end{equation}
+\begin{center}
+    where $ \omega^2_o = \frac{\beta}{m}$
+\end{center}
+
+We are introducing $ \omega^2_o$ as in all our applications there wil be some some restoring force, and intertial term such as inductance, mass etc.
+In fact that each application distinguishes from others is by this ratio and terms. this is why we have a generlised SHM equation. and whenever we are asked to solve a problem our main aim is to solve this ration, rest is the same. \\
+
+And it is proven to us that the solution to this equation is also generlised (the only difference being the frequency term.)
+
+if we solve this like any other general 2nd order differential equation.
+it's linear, homogenous, constant coefficients.
+by t
+\begin{center}
+    $m^2 + \omega^2_o = 0$ ---$>$
+    $m^2 = - \omega^2_o$ \\
+    $m = \iota {\omega_o}$ \\
+    $\psi(t) = \exp(\iota \omega_o t)$
+
+\end{center}
+
+where the solution is always $\psi(t) = \cos(\omega_o t)$
+% TODO: Im not too confident about my DE knowledge. forgotten. need to revise. 
+
+The solution is verifiable by substituting into eq:5\\
+
+In the case of this mechanical spring the $\psi(t)$ represents the displacement $x(t)$
+of the mass $m$ with the final equation becomnig;
+\begin{center}
+
+    $\frac{d^2x}{dt^2} + \omega^2_o x = 0$
+
+\end{center}
+the only difference in this application would be $\omega^2_o = \frac{K}{M}$
+where K is the restoring force defined by the spring used.
+
+
+\end{document}

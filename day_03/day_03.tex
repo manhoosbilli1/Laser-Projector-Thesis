@@ -1,0 +1,132 @@
+\documentclass[12pt]{article}
+\usepackage{hyperref}
+\title{47 DAYS RF WIZARD}
+\author{Shoaib Mustafa}
+\begin{document}
+\maketitle
+
+\begin{center}
+    \section*{DAY 3}
+\end{center}
+
+\section*{Howard Georgi: The Physics Of Waves}
+It begins by looking at the mass, spring system but this time it talkes about the degrees of freedom. it's the axis on which it can move. 
+Well the mass can move left and right but it says that it has single degree of freedom meaning x axis would be one degree of freedom, y another and z another? if that's the case then in polar coordinates it will 3 possible degrees of freedom? and it's called translational motion, but then how would we differentiate between x and y axis motion?
+\\A block in space can show 6 DOF if we consider that each axis can rotate about itself without translating anywhere else. so three translational motion, and 3 rotational motion.
+\\Further it says that the DOF are the number of coordinates of the system. and this system must be known to move forward. i wonder for an electron what are the degrees of motion? or is that not classically bound so it might not apply to it? 
+\\There must be a unique equation of motion for each coordinate we are studying. if in the case of 
+spring mass system we are looking at x axis then the motion between +x and -x can be explained by a single coordinate
+then there should be an equation for y and z axis? like this probably. 
+
+\begin{center}
+    \begin{equation}
+        m \frac{d^2}{dt^2} y(t) = -K y(t)    
+    \end{equation}   
+\end{center}
+this is why previously we gave it a generlised form of $\psi(t)$.\\
+I wonder what would be degree of freedom for current in an oscillator? can't wrap my head aroud it.
+\\solution being the same generalised. $x(t) = a\cos(\omega t) + b\sin(\omega t)$
+\\the superposition of terms in the solutions doesn't make sense to me. i think i'll go back to DE to make sense of this first. 
+
+\subsection*{Differential Equations Review MIT by Prof. Glibert Strang}
+It first talks about the linear and non linear equations, linear are the one where in the solution,
+the unknown variable itself is involved and but not to the power of anything. 
+
+\begin{center}
+    $\frac{dy}{dt} = ay + q(t) $
+\end{center}
+
+\subsubsection*{Gilbert Strang Book: Differential equations and linear algebra}
+It talks about what DE's are 
+It is the rate of change of anything, economy, growth, decay, how much current flows etc. it also talks about the fact that 
+each DE has a particular solution, which is only one and many homogenous solutions. This book is basically about that and trying to understand the DE's in action through equations. 
+
+I like the way the proffesor puts this. "That equation may describe growth (often exponential growth $e^{at}$ ). It may describe
+oscillation and rotation (with sines and cosines). Very frequently the motion approaches an
+equilibrium, where forces balance. That balance point is found by linear algebra, when the
+rate of change dy / dt is zero." 
+
+He talks of focusing on fundamental equations namely:
+\begin{center}
+    f(t) = $\cos$ and $\sin$    (oscillating and rotating)
+    \\f(t) = exponentials     (growth and decay)\\
+    f(t) = 1 for t $>$ 0        (A switch is turned on )\\
+    f(t) = impulse           (A sudden shock)\\   
+\end{center}
+
+I'm not sure as to what he means by "The solution y(t) is the response to those inputs-frequency response, exponential response, step response, impulse response."
+
+\subsubsection*{From video 1.1}
+it connects changes to the function y as it is.. and input which produce there own change, grow change or decay. it's a linear equation
+with a right hand side input term. 
+\begin{center}
+    \begin{equation}
+        \frac{dy}{dt} = ay + q(t) 
+    \end{equation}
+\end{center}
+and a non linear term. why is this a non linear term? because the function can depend on y in many ways. it could be $y^2$ etc.
+\begin{center}
+    \begin{equation}
+        \frac{dy}{dt} = f(y)
+    \end{equation}
+\end{center}
+
+Then there are second derivatives. the first derivatives gives slope of the graph, up down or constant. 2nd derivative tells about the bending of the curve. 
+How much it bends away from the straight line. i'm guessing straight line of the first derivative as that is just a slope. 
+Example is acceleration. that tells it how much it changes from the straight line being velocity. 
+\begin{center}
+    \begin{equation}
+        \frac{d^2y}{dt^2} = - Ky
+    \end{equation}
+\end{center}
+
+He emphasisez the fact that linear, 2nd order with constant coefficient equation is the most complex equation we can explicity solve with complete understanding. made me even say it.\\
+Example of the nice function is an exponential such that $f(t) = e^t$ for such functions we know the function in question and we solve and get a function $y(t)$ that we know. No maybes involved. 
+\\2nd best is a mixture of equation. with some non linear terms or coefficients. this would involve an integral in the solution or two. But when it comes to non linear equations or variable coefficients we do it numerically. 
+
+System of  equations: number of different unknowns or  equations. like multiple springs or oscillators involved. 
+\\
+\begin{center}
+    \begin{equation}
+        \frac{dy}{dt} = Ay
+    \end{equation}
+    \begin{equation}
+        \frac{d^2y}{dt^2} = -Sy
+    \end{equation}
+\end{center}
+
+now y is a vector with $y_1, y_2, y_3... y_n$. With A being a constant coefficient, an nxn matrix. 
+so this is a way of writing a range of equations.. if we expand the the matrix and vector. each equation will correspond to it's own unknown and it's own coefficient. 
+That will bring the idea of eigen values and eigen vectors. because it turns this coupled problem into a non coupled problem allowing us to solve it seperately. 
+\\He talks about implementing the learned techniques with matlab to calculate the numerical solutions. I've already done so in the course "Computational methods of physics" but will revise again probably having some application in mind. 
+
+
+\subsubsection*{Video 1.2: The calculus you need}
+\begin{itemize}
+    \item Derivatives basics, $e^x$, sin, cos, lnx 
+    \item Product rule. 
+    \item Chain rule of composite function (need to review)
+    \item fundamental Theorem: derivative of the integral of the function = the function itself. in other words they cancel out. we get function back.  
+\end{itemize}
+
+In order to test that the professor did an excercise to prove that the following solves $\frac{dy}{dt} = y + q(t)$
+\begin{center}
+    \begin{equation}
+        y(t) = \int_{0}^{t}e^{t-s} q(s) ds
+    \end{equation}
+\end{center}
+let's prove this. going to do it tomorrow. 
+
+\begin{center}
+    \begin{equation}
+        y(t) = \int_{0}^{t}e^{t-s} q(s) ds
+    \end{equation}
+\end{center}
+
+To be continued..
+
+
+\subsection*{Antennas's}
+Got to know more about waves by mechanical example. the waves have a few tendencies, resonance, amplitude construction, amplitude destruction. but i don't much about it yet to talk about it. 
+i'll also need to look for impedence. i think the it's probably time to turn to ARRL and Art of electronics. 
+\end{document}
